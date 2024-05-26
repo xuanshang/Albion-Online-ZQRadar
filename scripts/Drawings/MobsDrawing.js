@@ -1,5 +1,3 @@
-import { EnemyType } from "../Handlers/EnemyType.js";
-
 export class MobsDrawing extends DrawingUtils
 {
     constructor(Settings)

@@ -51,7 +51,7 @@ const mapsDrawing = new MapDrawing(settings);
 
 const chestsHandler = new ChestsHandler();
 const mobsHandler = new MobsHandler(settings);
-mobsHandler.updateMobInfo(await GetMobList());
+mobsHandler.updateMobInfo(GetMobList());
 
 
 const harvestablesHandler = new HarvestablesHandler(settings);
