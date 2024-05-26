@@ -14,8 +14,6 @@ import { PlayersHandler } from '../Handlers/PlayersHandler.js';
 import { WispCageHandler } from '../Handlers/WispCageHandler.js';
 import { FishingHandler } from '../Handlers/FishingHandler.js';
 
-import { GetMobList } from '../../mob-info/MobsInfo.js';
-
 var canvasMap = document.getElementById("mapCanvas");
 var contextMap = canvasMap.getContext("2d");
 
@@ -40,15 +38,17 @@ const harvestablesDrawing = new HarvestablesDrawing(settings);
 const dungeonsHandler = new DungeonsHandler(settings);
 
 var itemsInfo = new ItemsInfo();
+var mobsInfo = new MobsInfo();
 
 itemsInfo.initItems();
+mobsInfo.initMobs();
 
 var map = new MapH(-1);
 const mapsDrawing = new MapDrawing(settings);
 
 const chestsHandler = new ChestsHandler();
 const mobsHandler = new MobsHandler(settings);
-mobsHandler.updateMobInfo(GetMobList());
+mobsHandler.updateMobInfo(mobsInfo.moblist);
 
 
 const harvestablesHandler = new HarvestablesHandler(settings);
