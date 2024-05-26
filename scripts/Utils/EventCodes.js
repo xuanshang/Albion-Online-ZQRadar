@@ -24,6 +24,4 @@ export const EventCodes =
 
     FishingFinished: 344,
     NewFishingZoneObject: 347,
-    Track: 543,
-    TrackNotFound: 549,
 }
